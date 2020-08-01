@@ -21,10 +21,12 @@ self.MonacoEnvironment = {
 	}
 }
 
+// @ts-ignore
+self.pyright = pyright;
 
 monaco.editor.create(document.getElementById('container'), {
 	value: [
-		'def x() {',
+		'def x() -> None {',
 		'   print("Hello world!")',
 	].join('\n'),
 	language: 'python'
